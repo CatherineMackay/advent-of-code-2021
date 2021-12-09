@@ -14,10 +14,10 @@ with open('./day-1/input.txt', mode="r") as rawFile:
         cleanLine = line.strip()
         cleanLineInt = int(cleanLine)
         cleanList.append(cleanLineInt)
-    # print(cleanList)
     ### iterate through list applying logic 
     counter = 0 
-    previousNumber = cleanList.pop(0)
+    previousNumber = cleanList[0]
+
     for number in cleanList:
         if number > previousNumber:
             counter+=1
